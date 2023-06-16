@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: html-pv
+spec:
+  capacity:
+    storage: 5Gi
+  accessModes:
+    - ReadWriteMany
+  persistentVolumeReclaimPolicy: Retain
+  storageClassName: efs-sc
+  nfs:
+    path: /fs-0423909bf3370078f
+    server: fs-0423909bf3370078f.efs.us-east-2.amazonaws.com
